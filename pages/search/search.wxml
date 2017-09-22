@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+   
+    <icon class="search-icon" type="search" size="16"></icon>
+    <input class="search-content"     placeholder-class="search-placeholder"    bindinput="bindSearchInput" 
+      placeholder="搜索电影" 
+      value="{{searchValue}}" />
+    <block wx:if="{{showDelete}}"> 
+      <icon class="search-cancel" type="clear" bindtap="bindSearchDelete">x</icon> 
+    </block> 
+ 
+</view>

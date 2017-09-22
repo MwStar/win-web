@@ -1,0 +1,38 @@
+<view class="container">
+	<swiper indicator-dots="true"
+  autoplay="true" interval="2000" duration="500">
+  <block wx:for="{{subjects}}" class="swiper">
+    <swiper-item>
+      <image src="{{item.images.large}}" class="slide-image" mode="aspectFill"/>
+    </swiper-item>
+  </block>
+  </swiper>
+</view>
+<view class="header">
+  <text class="title">豆瓣电影影单集合</text>
+  <text class="info">最新最硬的影视信息收集</text>
+</view>
+<view class="container-ul">
+
+  <navigator url="../../pages/show/show?type=in_theaters"
+   class="li" hover-class="hover-bg">
+    <text>正在热映</text>
+    <image src="../../images/arrow.png"></image>
+  </navigator> 
+
+<navigator url="../../pages/show/show?type=coming_soon" class="li" hover-class="hover-bg">
+    <text>即将上映</text>
+    <image src="../../images/arrow.png"></image>
+  </navigator> 
+
+  <navigator url="../../pages/show/show?type=top250" class="li" hover-class="hover-bg">
+    <text>TOP250</text>
+    <image src="../../images/arrow.png"></image>
+  </navigator>
+
+  <navigator url="../../pages/show/show?type=us_box" class="li" hover-class="hover-bg">
+    <text>北美票房榜</text>
+    <image src="../../images/arrow.png"></image>
+  </navigator>
+</view>
+

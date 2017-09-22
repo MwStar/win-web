@@ -1,0 +1,42 @@
+ <scroll-view>
+
+
+<view class="container">
+
+  <loading hidden='{{!flag}}'>数据加载中...</loading>
+
+  <text>{{title}}</text>
+</view>
+
+
+<view class="container-ul">
+  
+  <block wx:for="{{subjects}}">
+    <navigator url="../../pages/detail/detail?id={{item.id}}" class="li">
+      <image src="{{item.images.small}}"></image>
+      <view class="center">
+        <text class="title">{{item.title}}</text>
+        <text class="original_title">{{item.original_title}}{{item.year}}</text>
+        <text>导演:<block wx:for="{{item.directors}}" class="directors">{{item.name}}</block>
+    </text>
+     </view>
+
+      <view class="rating">
+      <text>{{item.rating.average}}</text>
+     </view>
+     
+    </navigator>
+  </block>
+
+</view>
+
+<view class="tips">
+		<view wx:if="{{hasMore}}">
+			<text>使劲儿加载中。。。</text>
+		</view>
+		<view wx:else>
+			<text>数据加载完毕。。。</text>
+		</view>
+</view>
+
+</scroll-view>

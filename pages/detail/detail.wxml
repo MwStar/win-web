@@ -1,0 +1,29 @@
+<!--index.wxml-->
+
+<view class="img">
+
+ <loading hidden='{{!flag}}'>数据加载中...</loading>
+ 
+  <image src="{{subjects.images.large}}"></image>
+</view>
+
+
+<view class="describe">
+  <text class="title">{{subjects.title}}({{subjects.year}})</text>
+  <view class="data">
+    <text>{{rating}}{{subjects.rating.average}}</text>
+    <text>{{directors}}<block wx:for="{{subjects.directors}}" class="directors">{{item.name}}</block>
+    </text>
+    <text>{{casts}}<block wx:for="{{subjects.casts}}" class="casts">{{item.name}}，</block>
+    </text>
+  </view>
+
+</view>
+
+
+<view class="summary">
+  <text class="summary-title">{{summary}}</text>
+  <text class="detail">{{subjects.summary }}</text>
+</view>
+
+

@@ -1,0 +1,19 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+  <swiper indicator-dots="true"
+  autoplay="{{autoplay}}"
+  duration="500"circular="true">
+
+    <block wx:for="{{guide}}" class="swiper">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode="aspectFill"/>
+      </swiper-item>
+  </block>
+  </swiper>
+
+  <button class="start"
+        bindtap="toBoard"
+        hidden="{{flag ? true : false}}"> 
+        {{start}} 
+  </button>
+</view>

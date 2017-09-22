@@ -1,0 +1,45 @@
+.img{
+  display: flex;
+  height: 360px;
+  padding: 30px 40px 8px 40px;
+}
+.img image{
+  height: 360px;
+}
+.describe{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 4px 24px 34px 24px;
+}
+.title{
+  font-size: 22px;
+  color: #000;
+  text-align: center;
+}
+.data{
+  font-size: 13px;
+  color: #999999;
+  padding-left: 10px;
+}
+.data text{
+  display: block;
+  margin-top: 14px;
+}
+block{
+  padding-left: 20px;
+}
+.summary{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.summary-title{
+  font-size: 22px;
+  color: #000;
+}
+.detail{
+  font-size: 14px;
+  color: #222423;
+  text-indent:2em;
+}
